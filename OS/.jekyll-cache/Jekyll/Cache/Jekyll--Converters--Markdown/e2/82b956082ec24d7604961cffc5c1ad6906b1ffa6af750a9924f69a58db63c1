@@ -1,0 +1,213 @@
+I"�<h2 id="컴퓨터의-구조">컴퓨터의 구조</h2>
+
+<p><img src="https://user-images.githubusercontent.com/70308853/128698225-ad204dda-6e5e-46d2-8786-071b6067c9ad.png" alt="image" /></p>
+<ul>
+  <li>하드웨어</li>
+  <li>운영체제</li>
+  <li>Application Program</li>
+  <li>User</li>
+</ul>
+
+<hr />
+<h2 id="운영체제">운영체제</h2>
+
+<ul>
+  <li>보편적인 정의X</li>
+  <li>항상 켜져있는 프로그램 - &gt; 커널(Kernel)이라 불림</li>
+  <li>System &amp; Application Programs</li>
+</ul>
+
+<hr />
+<h2 id="전통적인-컴퓨터">전통적인 컴퓨터</h2>
+<p><img src="https://user-images.githubusercontent.com/70308853/128699329-143b728d-2a6b-45bb-9969-7459bd7ec434.png" alt="image" /></p>
+
+<ul>
+  <li>1개 이상의 CPU</li>
+  <li>BUS를 통해 많은 device 컨트롤러들이 연결</li>
+</ul>
+
+<hr />
+<h2 id="부트스트랩-프로그램">부트스트랩 프로그램</h2>
+<ul>
+  <li>컴퓨터의 전원을 킬 시, ROM이 HDD에 있는 OS - &gt; 메인메모리로 로드</li>
+</ul>
+
+<hr />
+<h2 id="interrupts인터럽트">Interrupts(인터럽트)</h2>
+<p><img src="https://user-images.githubusercontent.com/70308853/128701017-b1f25463-5f25-48ad-b21d-e2aa04bb8083.png" alt="image" /></p>
+
+<ul>
+  <li>BUS를 통해 하드웨어는 CPU에게 신호를 보냄으로써 Interrupt 발생</li>
+</ul>
+
+<hr />
+<h2 id="메모리-구조">메모리 구조</h2>
+<p><img src="https://user-images.githubusercontent.com/70308853/128702003-4f959ad0-183f-4303-b068-87bc0691dd57.png" alt="image" /></p>
+
+<ul>
+  <li>위로 갈수록 빠르고 저장 공간이 적음</li>
+</ul>
+
+<hr />
+<h2 id="io-구조">I/O 구조</h2>
+<p><img src="https://user-images.githubusercontent.com/70308853/128702396-3a868313-7fc9-4846-b490-b0d65261d158.png" alt="image" /></p>
+
+<ul>
+  <li>DMA(Direct Memory Access)</li>
+</ul>
+
+<hr />
+<h2 id="컴퓨터-시스템의-구조">컴퓨터 시스템의 구조</h2>
+<ul>
+  <li>
+    <p>SMP(Symmetric multiprocessing)</p>
+
+    <p><img src="https://user-images.githubusercontent.com/70308853/128702842-bcafb44f-4b6a-42e1-9ae8-bd5f973bb2d6.png" alt="image" /></p>
+    <ul>
+      <li>한개의 메모리에 여러 개의 CPU</li>
+    </ul>
+  </li>
+  <li>
+    <p>Multi-core design</p>
+
+    <p><img src="https://user-images.githubusercontent.com/70308853/128703161-ca66d50d-6a4a-41bf-b5b0-fa3f7b2623c7.png" alt="image" /></p>
+
+    <ul>
+      <li>한개의 CPU에 여러개의 core</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<h2 id="운영체제의-작업">운영체제의 작업</h2>
+
+<ul>
+  <li>
+    <p>Multiprogramming</p>
+
+    <p><img src="https://user-images.githubusercontent.com/70308853/128703543-4c46bff3-3dd4-4cd7-ae15-60f033b31d16.png" alt="image" /></p>
+
+    <ul>
+      <li>한 개의 메모리에 여러개의 프로그램을 올리는 것</li>
+      <li>CPU의 사용효율을 높임</li>
+    </ul>
+  </li>
+  <li>
+    <p>Multitasking(=multiprocessing)</p>
+
+    <ul>
+      <li>Multiprogramming의 논리적 확장</li>
+      <li>여러 작업을 처리</li>
+      <li>CPU scheduling
+        <ul>
+          <li>다음으로 어떤 프로세스를 처리할 것인지</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<h2 id="운영체제-mode">운영체제 Mode</h2>
+
+<p><img src="https://user-images.githubusercontent.com/70308853/128705111-7a850f7b-040f-490f-a77d-bb229ea1e8fd.png" alt="image" /></p>
+
+<ul>
+  <li>User mode
+    <ul>
+      <li>다른 프로그램 작업을 방해하는 것을 막기 위함</li>
+    </ul>
+  </li>
+  <li>Kernel mode
+    <ul>
+      <li>직접적인 하드웨어를 제어하는 모드
+        <ul>
+          <li>System Call - &gt; O/S에게 서비스를 요청하는 것</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<h2 id="virtualization가상화">Virtualization(가상화)</h2>
+<p><img src="https://user-images.githubusercontent.com/70308853/128854281-c3f17766-7c60-4bfa-b826-ea99be4631b7.png" alt="image" /></p>
+
+<ul>
+  <li>
+    <p>VMM(virtual machine manager)를 통해 여러 운영체제 사용</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ex) VMM - &gt; VMware, XEN, WSL
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<hr />
+<h2 id="컴퓨터-환경">컴퓨터 환경</h2>
+<ul>
+  <li>전통적인 컴퓨터</li>
+  <li>모바일 컴퓨터</li>
+  <li>
+    <p>Client-Server 컴퓨터
+<img src="https://user-images.githubusercontent.com/70308853/128857634-4c52fe73-8ff4-436c-b222-23b464d81ab5.png" alt="image" /></p>
+  </li>
+  <li>
+    <p>Peer-to-Perr 컴퓨터
+<img src="https://user-images.githubusercontent.com/70308853/128857705-a406a070-1e5b-4271-8505-43740f2f94bb.png" alt="image" /></p>
+  </li>
+  <li>
+    <p>Cloud 컴퓨터
+<img src="https://user-images.githubusercontent.com/70308853/128858280-38ad08d9-6043-4b4c-adc2-00869cfc62b4.png" alt="image" /></p>
+  </li>
+  <li>Real-Time Embedded Systems</li>
+</ul>
+
+<hr />
+<h2 id="운영체제의-역할">운영체제의 역할</h2>
+<ul>
+  <li>
+    <p>프로그램이 실행될 수 있는 환경 제공</p>
+
+    <ul>
+      <li>UI</li>
+      <li>프로그램 실행</li>
+      <li>I/O 작업</li>
+      <li>File</li>
+      <li>통신</li>
+      <li>Error 발견</li>
+      <li>자원 할당</li>
+      <li>Logging</li>
+      <li>보안 &amp; 보호</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/70308853/128859214-8a767f92-42a6-483b-a59c-1e30e39337d6.png" alt="image" /></p>
+
+<hr />
+<h2 id="사용자와-os의-인터페이스">사용자와 OS의 인터페이스</h2>
+<ul>
+  <li>CLI</li>
+  <li>GUI</li>
+  <li>Touch-Screen</li>
+</ul>
+
+<hr />
+<h2 id="응용프로그램과-os의-인터페이스">응용프로그램과 OS의 인터페이스</h2>
+<ul>
+  <li>System calls (= API)</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/70308853/128859709-3e06ec85-1c85-4bbd-a0e6-3edc8f849632.png" alt="image" /></p>
+
+<p><img src="https://user-images.githubusercontent.com/70308853/128860132-633cbf01-a4b1-4b59-944f-38aabf513c41.png" alt="image" /></p>
+
+<p><img src="https://user-images.githubusercontent.com/70308853/128860268-e77753c9-8baf-479f-8f83-9250f128248c.png" alt="image" /></p>
+
+<ul>
+  <li>System calls 예시</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/70308853/128860403-9333b2f4-3644-43b7-bda2-3ac3ecccd631.png" alt="image" /></p>
+
+:ET

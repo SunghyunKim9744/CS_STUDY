@@ -1,0 +1,93 @@
+<h2 id="동시에-실행되는-프로세스">동시에 실행되는 프로세스</h2>
+<ul>
+  <li>
+    <p>독립적인 프로세스</p>
+
+    <ul>
+      <li>공유하는 데이터가 없음</li>
+    </ul>
+  </li>
+  <li>
+    <p>공유하는 프로세스</p>
+
+    <ul>
+      <li>공유하는 데이터 존재</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<h2 id="ipcinter-process-communication">IPC(Inter-Process Communication)</h2>
+<ul>
+  <li>데이터를 공유하는 프로세스간의 통신</li>
+  <li>
+    <p>IPC 2가지 방법</p>
+
+    <ul>
+      <li>공유 메모리(shared memory)</li>
+    </ul>
+
+    <p><img src="https://user-images.githubusercontent.com/70308853/130062681-1b68d225-886b-46cf-898e-732730a8c5d2.png" alt="image" /></p>
+
+    <h3 id="생산자-소비자-문제producer-consumer-problem">생산자 소비자 문제(Producer-Consumer Problem)</h3>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>생산자는 정보를 생산하고 소비자는 정보를 소비하는 모델
+    ex) 1. compiler - &gt; assembly - &gt; assembler
+        2. Web server &amp; client
+</code></pre></div>    </div>
+
+    <h3 id="공유-메모리를-이용한-해결법">공유 메모리를 이용한 해결법</h3>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  생산자와 소비자가 동시에 실행되고 있을때, 버퍼(shared memory)를 이용
+  생산자는 버퍼를 채우고 소비자는 버퍼를 비움
+</code></pre></div>    </div>
+
+    <h3 id="단점">단점</h3>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  프로그래머들이 공유 메모리를 모두 코드로 작성해야함
+</code></pre></div>    </div>
+
+    <ul>
+      <li>메시지 패싱(message passing)</li>
+    </ul>
+
+    <p><img src="https://user-images.githubusercontent.com/70308853/130062735-18618d17-a92c-4cd8-87d7-49b4daf41a63.png" alt="image" /></p>
+
+    <ul>
+      <li>O/S에게 위임</li>
+      <li>두 프로세스가 통신하기 위해선 send, receive가 필요함</li>
+      <li>통신 링크의 다양한 방식
+        <ul>
+          <li>직접 통신과 간접 통신
+            <ul>
+              <li>직접 통신
+                <ul>
+                  <li>명시적(직접 프로세스를 정함)으로 통신</li>
+                  <li>자동으로 통신 링크 생성됨</li>
+                  <li>두 프로세스간의 통신 링크는 오직 한개뿐</li>
+                </ul>
+              </li>
+              <li>간접 통신
+                <ul>
+                  <li>mailboxes(ports) 이용</li>
+                  <li>mailbox를 이용하는 프로세스들이 있을때 링크 생성</li>
+                  <li>통신 링크가 여러개 있을수 있음</li>
+                  <li>OS는 새로운 mailbox를 생성, 삭제, send, receive할 수 있게 제공</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>동기 통신과 비동기 통신
+            <ul>
+              <li>
+                <ul>
+                  <li>blocking(synchronous) or non-blocking(asynchronous)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>자동과 명시적 통신</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+

@@ -1,0 +1,86 @@
+I"�
+<h2 id="운영체제">운영체제</h2>
+<ul>
+  <li><strong>컴퓨터</strong>를 운영하는 소프트웨어</li>
+</ul>
+
+<hr />
+<h2 id="컴퓨터">컴퓨터</h2>
+<ul>
+  <li><strong>정보</strong>를 처리하는 기계</li>
+</ul>
+
+<hr />
+<h2 id="정보">정보</h2>
+<ul>
+  <li>불확실성을 수치화 한것</li>
+  <li>사건 x의 정보량 = -log2(사건이 발생할확률)</li>
+  <li>I(x) = -log2P(x)</li>
+  <li>정보의 단위 1bit</li>
+</ul>
+
+<hr />
+<h2 id="정보의-처리">정보의 처리</h2>
+<ul>
+  <li>정보의 상태 변환(0-&gt;1 , 1-&gt;0)</li>
+  <li>부울 대수 : NOT,AND,OR</li>
+  <li>논리 게이트 : NOT, AND, OR, XOR, NAND, NOR</li>
+  <li>논리 회로 : IC, LSI, VLSI, ULSI, SoC, ….</li>
+  <li>
+    <p>저장과 전송 : 플립 버스, 데이터 버스, RF</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  덧셈 : 반가산기, 전가산기
+  뺄셈 : 2의 보수
+  곱셈, 나눗셈 : 덧셈과 뺄셈의 반복
+  실수 : 부동 소수점
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<hr />
+<h2 id="컴퓨터의-특징">컴퓨터의 특징</h2>
+<h3 id="범용성">범용성</h3>
+<ul>
+  <li>NOT, AND, OR 게이트만으로 모든 계산 가능</li>
+  <li>
+    <p>NAND 게이트만으로 모든 계산 가능</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  NAND(a1, a2, ..., an) = NOT(a1 AND a2 AND ... AND an)
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="계산가능성">계산가능성</h3>
+<ul>
+  <li>튜링 머신으로 계산가능한 것</li>
+  <li>정지 문제 : 튜링 머신으로 풀 수 없는 문제</li>
+</ul>
+
+<h2 id="alan-turing">Alan Turing</h2>
+<ul>
+  <li>현대적 컴퓨터 원형의 시초(CPU,RAM,OS,응용 프로그램)</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/70308853/128345550-65238fea-9822-417b-a554-18219d6a3472.png" alt="image" /></p>
+<h2 id="john-von-neumann">John von Neumann</h2>
+<ul>
+  <li>ISA(Instruction Set Architecture)</li>
+  <li>내장형 프로그램 방식(stored-program)을 처음 도입</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/70308853/128345800-ec96224c-af03-4fac-8da1-495526351017.png" alt="image" /></p>
+
+<h2 id="프로그램">프로그램</h2>
+<ul>
+  <li>하드웨어에게 실행하게 할 명령어들의 집합</li>
+</ul>
+
+<h2 id="운영체제의-역할">운영체제의 역할</h2>
+<ul>
+  <li>컴퓨터 위에서 항상 실행되고 있는 프로그램</li>
+  <li>시스템 서비스를 응용 프로그램에게 제공</li>
+  <li>프로세스, 자원, UI 관리</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/70308853/128346602-779623cc-aaf5-42b2-a418-eb53ca34e8a2.png" alt="image" /></p>
+:ET

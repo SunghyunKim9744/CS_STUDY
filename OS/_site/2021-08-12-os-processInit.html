@@ -1,0 +1,44 @@
+<h2 id="unix-os">UNIX O/S</h2>
+<ul>
+  <li>fork() System call - &gt; process 생성</li>
+  <li>자식 프로세스는 부모 프로세스의 주소 공간을 복사해서 생성</li>
+  <li>fork()의 반환 값이 0이면 자식, 프로세스 아이디 값이면 부모</li>
+</ul>
+
+<hr />
+<h2 id="fork">fork()</h2>
+<ul>
+  <li>부모 프로세스
+    <ol>
+      <li>실행</li>
+      <li>자식 프로세스가 종료될 떄까지 ready queue에서 wati queue로 이동 - &gt; wait() System call</li>
+    </ol>
+  </li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/70308853/129194058-15771eef-5d8a-4308-b473-d4e9e0f3a432.png" alt="image" /></p>
+
+<p>-&gt; 5</p>
+
+<p><img src="https://user-images.githubusercontent.com/70308853/129193976-a53c9d2f-b827-4113-b0f2-05dc928118e9.png" alt="image" /></p>
+
+<p>-&gt; 8</p>
+
+<p><img src="https://user-images.githubusercontent.com/70308853/129194366-05963937-745d-4953-bb97-5bd955588b88.png" alt="image" /></p>
+
+<p>-&gt; 16</p>
+
+<p><img src="https://user-images.githubusercontent.com/70308853/129195074-ddf58208-3bf5-4470-864e-0fc8b07ebae2.png" alt="image" /></p>
+
+<p>-&gt; Child Complete</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    execlp() - &gt; 메모리를 덮어씀
+    ls로 덮어쓰기
+</code></pre></div></div>
+
+<p><img src="https://user-images.githubusercontent.com/70308853/129195864-7df65e87-c9aa-4457-9c5f-22d4eb414f32.png" alt="image" /></p>
+
+<p>-&gt; B = C</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        getpid() - &gt; 자신의 프로세스 아이디 반환
+</code></pre></div></div>
